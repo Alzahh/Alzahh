@@ -18,12 +18,12 @@ public class User  {
     public User(String name, String surname, String username, String password, String address, int internalPhoneNumber) {
         this.name = name;
         this.surname = surname;
-        this.id = ++count;
         this.username = username;
         this.password = password;
         this.address = address;
         this.internalPhoneNumber = internalPhoneNumber;
     }
+
     public String getName() {
         return this.name;
     }
@@ -86,4 +86,16 @@ public class User  {
         return new ArrayList(Arrays.asList(cashier1, cashier2, cashier3, cashier4, cashier5, manager));
     }
 
+    @Override
+    public String toString() {
+        final StringBuffer sb = new StringBuffer("User{");
+        sb.append("name='").append(name).append('\'');
+        sb.append(", surname='").append(surname).append('\'');
+        sb.append(", username='").append(username).append('\'');
+        sb.append(", password='").append(password).append('\'');
+        sb.append(", address='").append(address).append('\'');
+        sb.append(", internalPhoneNumber=").append(internalPhoneNumber);
+        sb.append('}');
+        return sb.toString();
+    }
 }

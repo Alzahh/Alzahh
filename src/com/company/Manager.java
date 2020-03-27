@@ -1,52 +1,43 @@
 package com.company;
 
-import java.util.List;
-
 public class Manager extends User {
-    private String name;
-    private String surname;
-    private String username;
-    private String password;
-    private String address;
-    private int internalPhoneNumber;
 
-    public Manager(String name, String surname, String username, String password,String address, int internalPhoneNumber) {
-        super(name,surname,username,password,address,internalPhoneNumber);
+    public Manager(String name, String surname, String username, String password, String address, int internalPhoneNumber) {
+        super(name, surname, username, password, address, internalPhoneNumber);
     }
 
     @Override
     public String getName() {
-        return name;
+        return super.getName();
     }
 
     @Override
     public String getSurname() {
-        return surname;
+        return super.getSurname();
+    }
+
+    @Override
+    public int getInternalPhoneNumber() {
+        return super.getInternalPhoneNumber();
     }
 
     @Override
     public String getUsername() {
-        return username;
+        return super.getUsername();
     }
 
     @Override
     public String getPassword() {
-        return password;
+        return super.getPassword();
     }
 
-    public int getInternalPhoneNumber() {
-        return internalPhoneNumber;
+    @Override
+    public String getAddress() {
+        return super.getAddress();
     }
 
     @Override
     public String toString() {
-        return "Manager{" +
-                "name='" + this.name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", address='" + address + '\'' +
-                ", internalPhoneNumber=" + internalPhoneNumber +
-                '}';
+        return "Manager{} " + super.toString();
     }
 }
